@@ -1,0 +1,178 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f5fa;
+    color: #263238;
+}
+
+header {
+    background: #243b64;
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #00000010;
+    border-top: 4px solid #243b64;
+}
+
+.card p {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.pending {
+    border-color: #e5a000;
+}
+
+.progress {
+    border-color: #2878d0;
+}
+
+.completed {
+    border-color: #219653;
+}
+
+.form-section,
+.tasks-section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #00000010;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #243b64;
+}
+
+form {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+input {
+    flex: 1;
+    min-width: 180px;
+    padding: 12px;
+    border: 1px solid #ccd3df;
+    border-radius: 6px;
+}
+
+button {
+    background: #243b64;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #36578e;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #e1e6ed;
+}
+
+th {
+    background: #edf1f7;
+}
+
+select {
+    padding: 9px;
+    border: 1px solid #ccd3df;
+    border-radius: 5px;
+}
+
+.status-pending {
+    color: #a36b00;
+}
+
+.status-in-progress {
+    color: #1768b5;
+}
+
+.status-completed {
+    color: #168348;
+}
+
+.delete-btn {
+    background: #d93636;
+    padding: 8px 12px;
+}
+
+#emptyMessage {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+
+@media (max-width: 750px) {
+    .summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container {
+        padding: 12px;
+    }
+
+    .form-section, .tasks-section {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .summary {
+        grid-template-columns: 1fr;
+    }
+}

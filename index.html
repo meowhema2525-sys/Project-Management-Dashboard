@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Project Management Dashboard</h1>
+        <p>Manage your projects and track task progress</p>
+    </header>
+
+    <main class="container">
+
+        <section class="summary">
+            <div class="card">
+                <h3>Total Tasks</h3>
+                <p id="totalTasks">0</p>
+            </div>
+            <div class="card pending">
+                <h3>Pending</h3>
+                <p id="pendingTasks">0</p>
+            </div>
+            <div class="card progress">
+                <h3>In Progress</h3>
+                <p id="progressTasks">0</p>
+            </div>
+            <div class="card completed">
+                <h3>Completed</h3>
+                <p id="completedTasks">0</p>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Add New Task</h2>
+
+            <form id="taskForm">
+                <input type="text" id="taskName"
+                    placeholder="Enter task name" required>
+
+                <input type="text" id="taskDescription"
+                    placeholder="Enter task description" required>
+
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
+
+        <section class="tasks-section">
+            <h2>Task List</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Task Name</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="taskList"></tbody>
+                </table>
+            </div>
+            <p id="emptyMessage">No tasks available. Add a new task!</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Project Management Dashboard © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
